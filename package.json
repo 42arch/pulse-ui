@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "vue ui library",
   "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "build:style": "gulp --gulpfile build/gen-style.js",
     "build:component": "webpack --config build/webpack.component.js",
@@ -14,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/mainissues/pulse-ui.git"
   },
-  "keywords": [],
+  "keywords": ["vue components", "webpack", "vue 2.x"],
   "author": "",
   "license": "ISC",
   "bugs": {
