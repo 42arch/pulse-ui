@@ -1,12 +1,12 @@
 <template>
   <div class="pul-draggable-container" :style="{width: width + 'px', height: height + 'px'}" v-drag>
-    <div class="pul-draggable-container-header" id="pul-draggable-container-header">
-      <span class="pul-draggable-container-title">
+    <div class="header" id="header" ref="header">
+      <span class="title">
         {{title}}
       </span>
-      <span class="pul-draggable-container-close">x</span>
+      <span class="close-icon" @click="handleCloseEvt">&#215;</span>
     </div>
-    <div class="pul-draggable-container-content">
+    <div class="content">
       <slot></slot>
     </div>
   </div>
@@ -30,7 +30,9 @@ export default {
     }
   },
   methods: {
-    
+    handleCloseEvt(evt){
+      this.$emit("close", evt)
+    }
   },
   mounted() {
     
@@ -39,7 +41,8 @@ export default {
     drag(el) {
       setTimeout(()=> {
         let oDiv = el
-        let headerDiv = document.getElementById('pul-draggable-container-header')
+        console.log(233, el)
+        let headerDiv = el.querySelector('#header')
         headerDiv.onmousedown = function(e){
           let disX = e.clientX - oDiv.offsetLeft
           let disY = e.clientY - oDiv.offsetTop
