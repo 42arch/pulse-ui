@@ -1,5 +1,104 @@
-@import './var.less';
+@import './base.less';
 
-.puz-button {
-  background: @--button-color-primary;
+.@{css-prefix} {
+  &.button {
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    color: @base-font-color;
+    border-radius: @border-radius;
+    cursor: pointer;
+    padding: @button-padding;
+    background: @background-color;
+    margin: 0;
+    outline: none;
+    border: 1px solid transparent;
+    user-select: none;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+    .transition(all 0.1s linear);
+
+
+    &.active, &:hover, &:focus {
+      background-color: #C0C1C2;
+      color: rgba(0,0,0,.8);
+    }
+
+    // size
+    .font-sizes;
+
+    // disabled
+    .disabled;
+
+    // loading
+    &.loading {
+      position: relative;
+      .loading(1.2em, 0.2em);
+      color: transparent!important;
+      &:after {
+        border-color: #FFFFFF transparent transparent;
+      }
+    }
+
+    // shape
+
+    &.circle {
+      border-radius: 10em;
+    }
+
+    // type
+    &.default {
+      .type-default;
+    }
+
+    &.primary {
+      .type-primary;
+    }
+
+    &.info {
+      .type-info;
+    }
+
+    &.success {
+      .type-success;
+    }
+
+    &.warning {
+      .type-warning;
+    }
+
+    &.error {
+      .type-error;
+    }
+
+    &.dashed {
+      .type-dashed;
+    }
+
+  }
+}
+
+@-webkit-keyframes button-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes button-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }

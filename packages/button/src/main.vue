@@ -1,5 +1,5 @@
 <template>
-  <button class="puz-button"
+  <button :class="classObj"
     @click="handleClick">
     <slot></slot>
   </button>
@@ -7,9 +7,45 @@
 
 <script>
 export default {
-  name: 'PuzButton',
+  name: 'PlButton',
+  props: {
+    active: {
+      type: Boolean,
+      default: false
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    loading: {
+      type: Boolean,
+      default: false
+    },
+    size: {
+      type: String
+    },
+    type: {
+      type: String
+    },
+    shape: {
+      type: String
+    }
+  },
+  computed: {
+    classObj() {
+      return [
+        'pulse button',
+        { 'active': this.active },
+        { 'disabled': this.disabled },
+        { 'loading': this.loading },
+        this.type,
+        this.shape,
+        this.size
+      ]
+    }
+  },
   methods: {
-    handleCLick(evt){
+    handleCLick(evt) {
       this.$emit('cilck', evt)
     }
   }
