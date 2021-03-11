@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'PlButton',
+  name: 'pluse-button',
   props: {
     active: {
       type: Boolean,

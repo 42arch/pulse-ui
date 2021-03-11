@@ -1,4 +1,5 @@
 {
+  "layout": "packages/layout/index.js",
   "button": "packages/button/index.js",
   "link": "packages/link/index.js",
   "draggableContainer": "packages/draggableContainer/index.js"
