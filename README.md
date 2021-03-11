@@ -8,7 +8,6 @@
 + 🔳 Layout 
 + 🔳 Link
 + 🔳 Pagination
-+ ✔ Draggable Container（basic）
 + more
 
 ## Warning
