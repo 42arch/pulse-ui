@@ -6,48 +6,49 @@
   color: @base-font-color;
   outline: 0;
   position: relative;
-  height: @base-font-size + .5rem;
-  width: auto;
   display: inline-block;
   vertical-align: middle;
-
+  width: 3.5em;
+  height: 1.8em;
+  background: #ccc;
+  border-radius: 10em;
+  z-index: 1;
 
   &.checked {
-    &:before {
-      background-color: @primary-color;
-    }
+    background-color: @primary-color;
+    border: @primary-color;
+    
     &:after {
       box-shadow: none;
-      left: 2.15em;
+      left: 1.85em;
+    }
+
+    &:active {
+      &:after {
+        left: 1.6em;
+      }
     }
   }
 
-
-
-  &:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 3.5em;
-    height: 1.5em;
-    content: '';
-    background: #E0E1E2;
-    border-radius: @border-radius;
-    z-index: 1;
-  }
   &:after {
     position: absolute;
     z-index: 2;
     top: .15em;
     left: .15em;
-    width: 1.2em;
-    height: 1.2em;
+    width: 1.5em;
+    height: 1.5em;
     content: '';
     text-align: center;
-    border-radius: @border-radius;
+    border-radius: 10em;
     background: #fff;
     box-shadow: 0px 0px 3px #aaa;
     transition: all 0.36s;
+  }
+
+  &:active {
+    &:after {
+      width: 1.75em;
+    }
   }
 }
 

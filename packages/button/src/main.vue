@@ -1,6 +1,6 @@
 <template>
   <button :class="classObj"
-    @click="handleClick">
+    @click.stop="clickHandler">
     <slot></slot>
   </button>
 </template>
@@ -45,7 +45,7 @@ export default {
     }
   },
   methods: {
-    handleCLick(evt) {
+    clickHandler(evt) {
       this.$emit('cilck', evt)
     }
   }
