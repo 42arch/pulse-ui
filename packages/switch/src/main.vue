@@ -52,11 +52,17 @@ export default {
     }
   },
   methods: {
-    clickHandler() {
+    toggle() {
       const checked = this.currentValue === this.trueValue ? this.falseValue : this.trueValue;
       this.currentValue = checked
       this.$emit('input', checked)
       this.$emit('change', checked)
+    },
+    clickHandler() {
+      if (this.disabled) {
+        return false
+      }
+      this.toggle()
     }
   }
 }
