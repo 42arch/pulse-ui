@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css"/>
+  <link rel="stylesheet" href="https://fonts.proxy.ustclug.org/css?family=Lato:400,700,400italic,700italic&subset=latin"/>
+  <link rel="stylesheet" href="../lib/styles/index.css">
+  <style>
+    html, body {
+      padding: 0;
+      height: 0;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app" style="display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly;">
+    <div class="buttons" style="padding-bottom: 3em;">
+      按钮: 
+      <pl-button size="huge">默认</pl-button>
+      <pl-button type="primary" size="big">Primary</pl-button>
+      <pl-button type="info" size="large">Info</pl-button>
+      <pl-button type="dashed" size="normal">dashed</pl-button>
+      <pl-button type="success" size="medium" @click.native="alert('success')">Success</pl-button>
+      <pl-button type="warning" size="small" @click.native="console.log(233)">Warning</pl-button>
+      <pl-button type="error" size="tiny">Error</pl-button>
+  
+      <pl-button type="info" disabled>Disabled</pl-button>
+      <pl-button type="dashed" disabled>Disabled</pl-button>
+      <pl-button shape="circle"><i class="fa fa-search"></i></pl-button>
+      <pl-button type="success" shape="circle"><i class="fa fa-search" style="margin-right: .5em;"></i>Search</pl-button>
+      <pl-button type="error"><i class="fa fa-search" style="margin-right: .5em;"></i>Search</pl-button>
+  
+      <pl-button type="info" :loading="true">Loading</pl-button>
+      <button>原生</button>
+    </div>
+
+    <div class="switch">
+      开关：
+      <pl-switch ></pl-switch>
+
+    </div>
+
+
+
+
+  </div>
+  <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.5.9/vue.min.js"></script>
+  <script src="../lib/index.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        switch: false
+      }
+    })
+  </script>
+</body>
+</html>

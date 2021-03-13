@@ -1,7 +1,9 @@
 import Button from './packages/button/index.js';
+import Switch from './packages/switch/index.js';
 
 const components = [
   Button,
+  Switch
 ];
 
 const install = function (Vue, opt = {}) {
@@ -16,5 +18,6 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export default {
   install,
-  Button
+  Button,
+  Switch
 };

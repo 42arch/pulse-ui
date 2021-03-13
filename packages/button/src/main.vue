@@ -34,7 +34,7 @@ export default {
   computed: {
     classObj() {
       return [
-        'pulse button',
+        'pulse-button',
         { 'active': this.active },
         { 'disabled': this.disabled },
         { 'loading': this.loading },
