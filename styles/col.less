@@ -1,1 +1,21 @@
 @import './base.less';
+
+.@{css-prefix}col {
+  position: relative;
+  .flex(0 1 auto);
+  float: left;
+}
+
+&.span-0 {
+  display: none;
+}
+
+
+.loop(@n, @i: 1) when (@i <= @n) {
+  .span-@{i} {
+    width: (1 / 24 * @i * 100) * 1%;
+  }
+  .loop(@n, (@i + 1));
+}
+
+.loop(24);
