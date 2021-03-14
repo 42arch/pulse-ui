@@ -5,6 +5,8 @@
 ## Todo
 
 + ✔ Button
++ ✔ Switch
++ 🔳 Select
 + 🔳 Layout 
 + 🔳 Link
 + 🔳 Pagination

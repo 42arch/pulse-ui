@@ -1,9 +1,14 @@
 import Button from './packages/button/index.js';
 import Switch from './packages/switch/index.js';
+import Row from './packages/row/index.js';
+import Col from './packages/col/index.js';
+
 
 const components = [
   Button,
-  Switch
+  Switch,
+  Row,
+  Col
 ];
 
 const install = function (Vue, opt = {}) {
@@ -19,5 +24,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 export default {
   install,
   Button,
-  Switch
+  Switch,
+  Row,
+  Col
 };
