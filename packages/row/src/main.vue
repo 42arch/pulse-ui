@@ -1,5 +1,5 @@
 <template>
-  <div :class="classObj">
+  <div :class="classObj" :style="styleObj">
     <slot></slot>
   </div>
 </template>
@@ -8,6 +8,12 @@
 export default {
   name: 'PlRow',
   props: {
+    gutter: {
+      type: {
+        type: [String, Number],
+        default: 0
+      }
+    },
     align: {
       type: [String, Number],
       default: 'top'
@@ -24,6 +30,14 @@ export default {
         this.align,
         this.justify
       ]
+    },
+    styleObj() {
+      const ret = {}
+      if(this.gutter) {
+        ret.marginLeft = `-${this.gutter / 2}em`
+        ret.marginRight = ret.marginLeft
+      }
+      return ret
     }
   }
 }
