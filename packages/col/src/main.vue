@@ -15,6 +15,14 @@ export default {
     offset: {
       type: [String, Number],
       default: 0
+    },
+    push: {
+      type: [String, Number],
+      default: 0 
+    },
+    pull: {
+      type: [String, Number],
+      default: 0
     }
   },
   computed: {
@@ -25,17 +33,18 @@ export default {
     classObj() {
       return [
         'pulse-col',
-        `span-${this.span}`
+        `span-${this.span}`,
+        `offset-${this.offset}`,
+        `pull-${this.pull}`,
+        `push-${this.push}`
       ]
     },
     styleObj() {
       const ret = {}
-      console.log('gutter', this.gutter)
       if(this.gutter) {
         ret.paddingLeft = this.gutter / 2 + 'em'
         ret.paddingRight = ret.paddingLeft
       }
-      console.log(ret)
       return ret
     }
   }
