@@ -1,0 +1,61 @@
+@import './base.less';
+
+.@{css-prefix}button-group {
+  display: inline-flex;
+  flex-direction: row;
+  vertical-align: baseline;
+  margin: 0;
+
+  .@{css-prefix}button {
+    font-size: inherit;
+  }
+  .@{css-prefix}button:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .@{css-prefix}button:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .@{css-prefix}button:not(:first-child):not(:last-child) {
+    border-radius: 0;
+  }
+
+  &.primary {
+    .@{css-prefix}button {
+      .type-primary;
+    }
+  }
+
+  &.info {
+    .@{css-prefix}button {
+      .type-info;
+    }
+  }
+
+  &.success {
+    .@{css-prefix}button {
+      .type-success;
+    }
+  }
+
+  &.warning {
+    .@{css-prefix}button {
+      .type-warning;
+    }
+  }
+
+  &.error {
+    .@{css-prefix}button {
+      .type-error;
+    }
+  }
+
+  &.dashed {
+    .@{css-prefix}button {
+      .type-dashed;
+    }
+  }
+
+  .font-sizes;
+}
