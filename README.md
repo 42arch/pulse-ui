@@ -8,6 +8,7 @@
 + ✔ Button Group
 + ✔ Switch
 + ✔ Grid(Row, Column)
++ ✔ Loading
 + 🔳 Select
 + 🔳 Layout 
 + 🔳 Link
