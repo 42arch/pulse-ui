@@ -1,6 +1,6 @@
 # 💙 Pulse UI 💗
 ## Status
-👩‍💻Still coding! 
+👩‍💻Still coding on it! 
 
 ## Todo
 

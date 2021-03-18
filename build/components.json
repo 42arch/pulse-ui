@@ -1,5 +1,7 @@
 {
   "button": "packages/button/index.js",
+  "button-group": "packages/button-group/index.js",
+  "radio": "packages/radio/index.js",
   "switch": "packages/switch/index.js",
   "row": "packages/row/index.js",
   "col": "packages/col/index.js",
