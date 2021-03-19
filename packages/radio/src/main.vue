@@ -12,6 +12,10 @@
 export default {
   name: 'PlRadio',
   props: {
+    index: {
+      type: [String, Number],
+      required: true,
+    },
     disabled: {
       type: Boolean,
       default: false
@@ -33,7 +37,12 @@ export default {
   },
   methods: {
     clickHandler(evt) {
+      if (this.disabled) {
+        return
+      }
       this.active = true
+      evt.index = this.index
+      // this.$emit('change', this.index)
     }
   }
 }

@@ -30,8 +30,33 @@
       width: 1em;
       height: 1em;
       opacity: 1;
-      transform: scale(.45555);
+      transform: scale(.75);
       background: @primary-color;
+    }
+  }
+
+  &.disabled {
+    // ._disabled;
+    cursor: not-allowed;
+    opacity: .55!important;
+    background-image: none!important;
+    box-shadow: none!important;
+
+    > span {
+      cursor: not-allowed;
+    }
+
+    > label {
+      &:hover {
+        &:before {
+          cursor: not-allowed;
+          border-color: #c0c4cc;
+        }
+      }
+    }
+
+    > label:before {
+      color: #c0c4cc;
     }
   }
 

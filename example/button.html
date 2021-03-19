@@ -94,7 +94,8 @@
     </div>
 
     <div style="margin-top: 20px">
-      <pl-radio v-model="radioValue">选项一</pl-radio>
+      <pl-radio v-model="radioValue2" @change="onMsg">选项一</pl-radio>
+      <pl-radio v-model="radioValue" disabled>选项二</pl-radio>
     </div>
 
 
@@ -107,7 +108,8 @@
       data () {
         return {
           v1: false,
-          radioValue: false
+          radioValue: 1,
+          radioValue2: 2
         }
       },
       methods: {
@@ -116,6 +118,9 @@
         },
         onStatus(e) {
           console.log('233', e)
+        },
+        onMsg(e) {
+          console.log('xx', e)
         }
       }
     })
