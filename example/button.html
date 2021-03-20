@@ -96,6 +96,12 @@
     <div style="margin-top: 20px">
       <pl-radio v-model="radioValue2" @change="onMsg">选项一</pl-radio>
       <pl-radio v-model="radioValue" disabled>选项二</pl-radio>
+
+
+      <pl-radio-group v-model="values" @change="onChange">
+        <pl-radio :index="index" v-for="(c, index) in ['A', 'B', 'C']" :key="index"><span v-html="c"></span></pl-radio>
+
+      </pl-radio-group>
     </div>
 
 
@@ -109,7 +115,8 @@
         return {
           v1: false,
           radioValue: 1,
-          radioValue2: 2
+          radioValue2: 2,
+          values: ''
         }
       },
       methods: {
@@ -121,6 +128,9 @@
         },
         onMsg(e) {
           console.log('xx', e)
+        },
+        onChange(e) {
+          console.log(111, e)
         }
       }
     })
