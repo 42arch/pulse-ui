@@ -6,6 +6,7 @@ import Switch from './packages/switch/index.js';
 import Row from './packages/row/index.js';
 import Col from './packages/col/index.js';
 import Loading from './packages/loading/index.js';
+import Input from './packages/input/index.js';
 
 
 const components = [
@@ -16,7 +17,8 @@ const components = [
   Switch,
   Row,
   Col,
-  Loading
+  Loading,
+  Input
 ]
 
 const install = function (Vue, opt = {}) {
@@ -38,5 +40,6 @@ export default {
   Switch,
   Row,
   Col,
-  Loading
+  Loading,
+  Input
 }
