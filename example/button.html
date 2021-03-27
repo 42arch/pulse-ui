@@ -13,7 +13,7 @@
       margin: 0;
       padding: 0;
       height: 0;
-      font-size: 14px;
+      font-size: 12px;
     }
 
     .content {
@@ -33,13 +33,13 @@
   </style>
 </head>
 <body>
-  <div id="app" style="display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly;">
+  <div id="app" style="display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly; margin-left: 30px;">
 
 
     <!-- <pl-button type="error" size="tiny" @click.native="buttonClick">Error</pl-button> -->
     <div class="buttons" style="padding-bottom: 3em;">
       按钮: 
-      <pl-button size="huge">默认</pl-button>
+      <pl-button>默认</pl-button>
       <pl-button type="primary" size="big">Primary</pl-button>
       <pl-button type="info" size="large">Info</pl-button>
       <pl-button type="dashed" size="normal">dashed</pl-button>
@@ -106,6 +106,12 @@
       </pl-radio-group>
     </div>
 
+
+    <div style="margin-top: 20px;">
+      <pl-input></pl-input>
+      <pl-input disabled></pl-input>
+
+    </div>
 
   </div>
   <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.min.js"></script>
