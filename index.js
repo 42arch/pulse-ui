@@ -7,6 +7,8 @@ import Row from './packages/row/index.js';
 import Col from './packages/col/index.js';
 import Loading from './packages/loading/index.js';
 import Input from './packages/input/index.js';
+import Select from './packages/select/index.js';
+import Option from "./packages/option/index.js";
 
 
 const components = [
@@ -18,7 +20,9 @@ const components = [
   Row,
   Col,
   Loading,
-  Input
+  Input,
+  Select,
+  Option
 ]
 
 const install = function (Vue, opt = {}) {
@@ -41,5 +45,7 @@ export default {
   Row,
   Col,
   Loading,
-  Input
+  Input,
+  Select,
+  Option
 }

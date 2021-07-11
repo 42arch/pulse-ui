@@ -13,13 +13,12 @@
       margin: 0;
       padding: 0;
       height: 0;
-      font-size: 12px;
+      /* font-size: 12px; */
     }
 
     .content {
       width: 100%;
       height: 100%;
-      /* border: 1px dashed darkcyan; */
       text-align: center;
     }
 
@@ -110,7 +109,14 @@
     <div style="margin-top: 20px;">
       <pl-input></pl-input>
       <pl-input disabled></pl-input>
+    </div>
 
+    <div style="margin-top: 20px;">
+      <pl-select v-model="selectedValue" @change="selectedValueChange">
+        <pl-option index="0" value="Option-1"></pl-option>
+        <pl-option index="1" value="Option-2"></pl-option>
+        <pl-option index="2" value="Option-3"></pl-option>
+      </pl-select>
     </div>
 
   </div>
@@ -124,7 +130,8 @@
           v1: false,
           radioValue: 1,
           radioValue2: 2,
-          values: ''
+          values: '',
+          selectedValue: ''
         }
       },
       methods: {
@@ -139,6 +146,9 @@
         },
         onChange(e) {
           console.log(111, e)
+        },
+        selectedValueChange(e) {
+          console.log('select value', e, this.selectedValue)
         }
       }
     })

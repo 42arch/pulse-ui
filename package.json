@@ -15,15 +15,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mainissues/pulse-ui.git"
+    "url": "git+https://github.com/rendan42/pulse-ui.git"
   },
   "keywords": ["vue components", "webpack", "vue 2.x"],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mainissues/pulse-ui/issues"
+    "url": "https://github.com/rendan42/pulse-ui/issues"
   },
-  "homepage": "https://github.com/mainissues/pulse-ui#readme",
+  "homepage": "https://github.com/rendan42/pulse-ui#readme",
   "devDependencies": {
     "@babel/core": "^7.13.8",
     "@babel/preset-env": "^7.13.9",
